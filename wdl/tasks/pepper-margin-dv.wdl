@@ -5,6 +5,7 @@ task pepper_margin_dv_t {
     Int threads
     File reference
 	File bamAlignment
+  String dockerImage = "kishwars/pepper_deepvariant:r0.8"
 	String mapMode = "ont"
 	Int memSizeGb = 256
 	Int diskSizeGb = 1024
@@ -31,7 +32,7 @@ task pepper_margin_dv_t {
   }
 
   runtime {
-    docker: "kishwars/pepper_deepvariant:r0.8"
+    docker: dockerImage
     cpu: threads
 	memory: memSizeGb + " GB"
 	disks: "local-disk " + diskSizeGb + " SSD"
