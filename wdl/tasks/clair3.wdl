@@ -37,15 +37,15 @@ task clair3 {
       REF=$(basename ~{ref})
       REF_IDX=$(basename ~{refFai})
 
-      ln -s ~{assembly} ./$REF
-      ln -s ~{assemblyIndex} ./$REF_IDX
+      ln -s ~{ref} ./$REF
+      ln -s ~{refFai} ./$REF_IDX
 
       ## soft link bam and bai so they are in the same directory
       BAM=$(basename ~{bam})
       BAI=$(basename ~{bai})
 
-      ln -s ~{assembly} ./$BAM
-      ln -s ~{assemblyIndex} ./$BAI
+      ln -s ~{bam} ./$BAM
+      ln -s ~{bai} ./$BAI
 
       /opt/bin/run_clair3.sh --bam_fn=${BAM} --ref_fn=${REF} \
       --threads=~{threads} \
