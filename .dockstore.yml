@@ -12,3 +12,6 @@ workflows:
    -  name: minimapWorkflow
       subclass: WDL
       primaryDescriptorPath: /wdl/workflows/minimap.wdl
+   -  name: clair3
+      subclass: WDL
+      primaryDescriptorPath: /wdl/tasks/clair3.wdl
