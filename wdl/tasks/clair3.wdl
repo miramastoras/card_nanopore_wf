@@ -17,13 +17,13 @@ task clair3 {
       File bam
       File bai
       String platform = "ont"
-      String modelName="r941_prom_sup_g5014" # you can use guppy5 model for guppy6 according to their github
+      String modelName = "r941_prom_sup_g5014" # you can use guppy5 model for guppy6 according to their github
 
       Int threads = 64
       Int memSizeGb = 128
       Int diskSizeGb = 1024
       Int kmerSize = 17
-      dockerImage="hkubal/clair3:latest"
+      String dockerImage = "hkubal/clair3:latest"
     }
 
 
