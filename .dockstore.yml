@@ -15,3 +15,6 @@ workflows:
    -  name: clair3
       subclass: WDL
       primaryDescriptorPath: /wdl/tasks/clair3.wdl
+   -  name: marginPhaseSmall
+      subclass: WDL
+      primaryDescriptorPath: /wdl/tasks/margin_phase_small.wdl
