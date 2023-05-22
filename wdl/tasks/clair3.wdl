@@ -49,7 +49,7 @@ task clair3 {
 
       /opt/bin/run_clair3.sh --bam_fn=${BAM} --ref_fn=${REF} \
       --threads=~{threads} \
-      --platform=~{platform}
+      --platform=~{platform} \
       --model_path="/opt/models/~{modelName}" \
       --output="./" \
       --include_all_ctgs
