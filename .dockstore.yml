@@ -18,3 +18,6 @@ workflows:
    -  name: marginPhaseSmall
       subclass: WDL
       primaryDescriptorPath: /wdl/tasks/margin_phase_small.wdl
+   -  name: indexVcf
+      subclass: WDL
+      primaryDescriptorPath: /wdl/tasks/indexVcf.wdl
