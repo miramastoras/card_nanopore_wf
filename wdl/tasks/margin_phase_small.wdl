@@ -5,7 +5,7 @@ workflow runMarginPhaseSmall {
     call marginPhaseSmall
 
     output {
-        File out_margin_phase_small = marginPhase.phasedVcf
+        File out_margin_phase_small = marginPhaseSmall.phasedVcf
     }
 }
 
