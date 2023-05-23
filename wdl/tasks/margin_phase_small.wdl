@@ -30,7 +30,7 @@ task marginPhaseSmall {
         samtools index -@ ~{threads} ~{bamFile}
         samtools faidx ~{refFile}
         mkdir output/
-        margin phase ~{bamFile} ~{refFile} ~{combinedVcfFile} /opt/margin/params/phase/allParams.phase_vcf.ont.json -t ~{threads} -o output/~{sampleName} -M
+        margin phase ~{bamFile} ~{refFile} ~{vcfFile} /opt/margin/params/phase/allParams.phase_vcf.ont.json -t ~{threads} -o output/~{sampleName} -M
         bgzip output/~{sampleName}.phased.vcf
     >>>
     output {
